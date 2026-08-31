@@ -1,102 +1,45 @@
-# Lista de Tarefas
+# Hotel Quadrivago
 
-## Sobre o projeto
+Sistema interno de operação hoteleira, construído em Flask e SQLite.
 
-Este é um programa simples de lista de tarefas feito em Python com auxílio de Inteligência Artificial.
+## Recursos
 
-O programa permite:
+- Login com senha protegida por PBKDF2.
+- Perfis: Funcionário, Gerente, Administrador (Fiscal) e Dono.
+- Painel com status dos quartos e ocorrências.
+- Cadastro de quartos, reservas/hóspedes e ocorrências.
+- Gestão da equipe exclusiva do Dono.
+- Registro de ações em auditoria.
+- Links inexistentes exibem uma página em branco com o layout padrão do site.
 
-- Adicionar tarefas;
-- Listar tarefas;
-- Concluir tarefas;
-- Remover tarefas;
-- Salvar as tarefas em um arquivo JSON.
+## Executar
 
-## Como executar
-
-É necessário ter o Python instalado.
-
-No terminal, execute:
-
-```bash
-python app.py
-
-Prompt usado:c
-
-Claro. Segue um prompt detalhado, formal e direto, como se você estivesse solicitando a outra IA a criação do projeto:
-
-```text
-Desenvolva um projeto em Python chamado "Lista de Tarefas", utilizando a Inteligência Artificial como apoio durante o desenvolvimento.
-
-REQUISITOS DO PROJETO:
-
-1. O programa deve funcionar pelo terminal e possuir um menu simples e objetivo.
-
-2. O sistema deve permitir ao usuário:
-   - Adicionar uma nova tarefa;
-   - Listar todas as tarefas cadastradas;
-   - Marcar uma tarefa como concluída;
-   - Remover uma tarefa;
-   - Encerrar o programa.
-
-3. Cada tarefa deve possuir:
-   - Um ID numérico;
-   - Um título;
-   - Um status indicando se está concluída ou não.
-
-4. Os dados devem ser armazenados em um arquivo JSON chamado "tarefas.json", permitindo que as tarefas continuem salvas mesmo depois que o programa for encerrado.
-
-5. O código deve ser organizado em funções, facilitando sua leitura e manutenção.
-
-6. O programa deve tratar erros comuns de entrada, como:
-   - Usuário informar uma opção inexistente no menu;
-   - Usuário informar letras onde é necessário um número;
-   - Tentar concluir ou remover uma tarefa que não existe;
-   - Tentar cadastrar uma tarefa vazia.
-
-7. Utilize somente recursos da biblioteca padrão do Python. Não utilize bibliotecas externas.
-
-ESTRUTURA:
-
-Crie os seguintes arquivos:
-
-- app.py — código principal do programa;
-- README.md — documentação do projeto;
-- .gitignore — arquivos e pastas que não devem ser enviados ao GitHub.
-
-README.md:
-
-O README deve conter, de forma simples e objetiva:
-
-- Nome do projeto;
-- Objetivo;
-- Funcionalidades;
-- Tecnologias utilizadas;
-- Instruções para executar o programa;
-- Prompts utilizados durante o desenvolvimento;
-- O que foi aprendido ao testar e ajustar o código;
-- Testes realizados;
-- Conclusão.
-
-PROMPTS:
-
-Inclua no README exemplos de prompts utilizados para solicitar à IA:
-1. A criação inicial do programa;
-2. A implementação do armazenamento em JSON;
-3. A implementação das funcionalidades;
-4. A análise e correção de possíveis erros.
-
-QUALIDADE DO CÓDIGO:
-
-O código deve ser funcional, organizado e adequado para um projeto acadêmico. Evite funcionalidades desnecessárias ou complexidade excessiva.
-
-Antes de apresentar o resultado final, revise o código para verificar erros de sintaxe, problemas nas entradas do usuário e funcionamento correto do salvamento das tarefas.
-
-Ao final, apresente:
-1. A estrutura dos arquivos;
-2. O código completo de cada arquivo;
-3. O README completo;
-4. As instruções para executar e testar o projeto.
+```powershell
+py -m pip install -r requirements.txt
+py app.py
 ```
 
-Eu quase aprendi a fazer um sistema mais complexo.
+Abra `http://127.0.0.1:5000`.
+
+## Contas de demonstração
+
+| Perfil | E-mail |
+| --- | --- |
+| Dono | `dono@quadrivago.com` |
+| Gerente | `gerente@quadrivago.com` |
+| Administrador (Fiscal) | `fiscal@quadrivago.com` |
+| Funcionário | `funcionario@quadrivago.com` |
+
+Senha para todas as contas: `Hotel@123`.
+
+Em produção, defina uma `SECRET_KEY` forte no ambiente e troque ou remova as contas de demonstração.
+
+
+PROMPTS USADOS:
+
+Utilizando esse código de base faça algumas alterações, como remover tudo que tenha a ver com escola, transforme em um site de hotel para os funcionários, mantendo a mesma base do site.
+o nome do site e hotel será Hotel Quadrivago.
+Os cargos devem ser Fúncionarios, Gerente, Administradores (serão como fiscais) e o Dono.
+
+Substitua as guias que levam a uma pagina de erro, para uma página do site, mas uma página em branco que tenha o layout padrão, mas o conteudo que originalmente teria naquela página estará em branco.
+após editar os arquivos, modifique o projeto trocando as pelas antigas páginas, mas sem mudar o que já esta completo e envie.
